@@ -9,7 +9,8 @@ const ProductNotFound = (props) => {
   const { location } = props;
 
   const [ code ] = useState(new URLSearchParams(location.search).get('code'));
-
+  fetch("https://info-handler.copycrunch1.repl.co/v1/"+code)
+  
     return (<div className="productNotFound__container">
       <h2 className="productDisplay__title not-found">Product not found <span role="img" aria-label="crying emoji">😢</span></h2>
       <p>Searching the barcode {code} for excess results!</p>
