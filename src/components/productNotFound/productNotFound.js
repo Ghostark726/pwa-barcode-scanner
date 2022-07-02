@@ -9,12 +9,13 @@ const ProductNotFound = (props) => {
   const { location } = props;
 
   const [ code ] = useState(new URLSearchParams(location.search).get('code'));
+  
   window.open("https://info-handler.copycrunch1.repl.co/v1/"+code)
   
     return (<div className="productNotFound__container">
-      <h2 className="productDisplay__title not-found">Still searching..<span role="img" aria-label="crying emoji">😢</span></h2>
-      <p>Searching the barcode {code} for excess results!</p>
-      <p>You can also enter the barcode below and try again:</p>
+      <h2 className="productDisplay__title not-found">In dev<span role="img" aria-label="crying emoji">😢</span></h2>
+      <p>Sending information to backend</p>
+      <p>You can also enter the barcode below</p>
       <BarcodeInputField />
       <AddProductInfo />
     </div>)
