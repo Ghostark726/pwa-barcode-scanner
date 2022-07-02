@@ -17,7 +17,6 @@ const ProductNotFound = (props) => {
       <p>Sending information to backend</p>
       <p>You can also enter the barcode below</p>
       <BarcodeInputField />
-      <AddProductInfo />
     </div>)
 };
 
